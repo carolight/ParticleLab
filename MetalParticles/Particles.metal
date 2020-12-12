@@ -42,7 +42,7 @@ kernel void particleRendererShader(texture2d<float, access::write> outTexture [[
                                    
                                    uint id [[thread_position_in_grid]])
 {
-    const float4x4 inParticle = inParticles[id];
+    float4x4 inParticle = inParticles[id];
     
     const float spawnSpeedMultipler = 2.0;
     
